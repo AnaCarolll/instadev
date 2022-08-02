@@ -1,7 +1,7 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define(
+    let p =  sequelize.define(
         "Publicacoes",
         {
             id: {
@@ -17,12 +17,7 @@ module.exports = (sequelize, DataTypes) => {
               usuarios_id: {
                 type:DataTypes.INTEGER,
                 allowNull: false,
-                references: {
-                  model:{
-                    tableName: "Publicacoes"
-                  },
-                  key:"id"
-                }
+               
               },
               imagem: {
                 type:DataTypes.STRING(45),
@@ -31,8 +26,10 @@ module.exports = (sequelize, DataTypes) => {
             
         },
         {
-          tablename:"Usuarios",
+          tableName:"publicacoes",
           timestamps:false
       }
     )
+     return p;
+
 }
