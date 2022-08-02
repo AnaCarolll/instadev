@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
                 through:"amizades",
                 foreignKey:"usuarios_id1",
                 otherKey:"usuarios_id2",
-                timestamps: false
+                timestamps: false //funcao
             }
         );
     }
